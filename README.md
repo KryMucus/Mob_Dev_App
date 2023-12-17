@@ -16,9 +16,10 @@ Pour que l'application fonctionne correctement, vous aurez besoin d'une clé API
 3. Remplacez `<RENTRER-LA-CLE-ICI>` par la clé API que je vous ai fournie.
 4. Nom d'utilisateur:  Christophe_Mae  / Mot de Passe :  Willemite
 
-
-## Configuration Nécessaire
 Nous n'avons pas pu implémenter les tests requis
+
+
+
 
 ```kotlin - 
 val key = "<RENTRER-LA-CLE-ICI>" // Ligne 64
