@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FootixV2</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Sting pour les settings -->
+    <string name="signature_summary">zene bene </string>
+    <string name="signature_dialog_title">Texte 2 en détente</string>
+    <string name="notifications_title">Texte 3 à la bien</string>
+    <string name="notifications_summary">Texte 4 et calmement</string>
+
+
+    <!-- String pour le MAin -->
+    <string name="main_bottom">Last Seen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

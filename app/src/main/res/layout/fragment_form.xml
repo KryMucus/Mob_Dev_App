@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond3"
+    android:theme="@style/AppTheme"
+    tools:context=".FormFragment" >
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="169dp"
+        android:layout_height="76dp"
+        android:background="@drawable/btn_stylew"
+        android:text="submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="198dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/form_stylew"
+        app:layout_constraintBottom_toTopOf="@id/submit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintVertical_bias="0.353">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#C5C4E4">
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C4E4"
+                android:textSize="16sp"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vos idées d'amélioration"
+            android:textColor="@color/white"
+            android:textColorHint="#C5C4E4"
+            app:counterEnabled="true"
+            app:counterMaxLength="200">
+
+            <EditText
+                android:id="@+id/editTextIdeas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vos idées d'amélioration"
+                android:lines="5"
+                android:textColor="@color/white"
+                android:textColorHint="#C5C4E4"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="196dp"
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="Please share with us how to improve your experience"
+        android:textColor="@color/white"
+        android:textColorHint="#C5C4E4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/submit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_stylew"
+        android:text="back"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ballFragment">
+
+    <fragment
+        android:id="@+id/ballFragment"
+        android:name="com.example.footixv2.BallFragment"
+        android:label="fragment_ball"
+        tools:layout="@layout/fragment_ball" >
+        <action
+            android:id="@+id/action_ballFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment" />
+        <action
+            android:id="@+id/action_ballFragment_to_loadingInternetFragment"
+            app:destination="@id/loadingInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.footixv2.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.footixv2.AnswerFragment"
+        android:label="fragment_answer"
+        tools:layout="@layout/fragment_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_ballFragment"
+            app:destination="@id/ballFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingInternetFragment"
+        android:name="com.example.footixv2.loadingInternetFragment"
+        android:label="fragment_loading_internet"
+        tools:layout="@layout/fragment_loading_internet" >
+        <action
+            android:id="@+id/action_loadingInternetFragment_to_answerInternetFragment"
+            app:destination="@id/answerInternetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerInternetFragment"
+        android:name="com.example.footixv2.AnswerInternetFragment"
+        android:label="fragment_answer_internet"
+        tools:layout="@layout/fragment_answer_internet" >
+        <action
+            android:id="@+id/action_answerInternetFragment_to_ballFragment"
+            app:destination="@id/ballFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.footixv2.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" >
+        <action
+            android:id="@+id/action_formFragment_to_ballFragment"
+            app:destination="@id/ballFragment" />
+    </fragment>
+</navigation>
