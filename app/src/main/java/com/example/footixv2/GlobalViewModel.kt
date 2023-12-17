@@ -33,13 +33,10 @@ class GlobalViewModel(
 ) : ViewModel() {
 
 
-    //Je vais pour l'instant partir sur un seul View Model pour tous mes fragments
+    // un seul View Model pour tous mes fragments
     //Il devra me permettre de gérer mes cycles de vies
     //Comme les rotations de 'écran par exemple et d'assurer une première couche de persistance
     // de données
-
-    //private lateinit var dbHelper: DatabaseHelper
-    //private val client = OkHttpClient()
 
     //Dans cette variable, je vais stocker la question posée
     var question = MutableLiveData<String>()
@@ -52,31 +49,24 @@ class GlobalViewModel(
     //on va utiliser la bibliothèque OK HTTP
     //l'url de l'api
     val url ="https://api.openai.com/v1/chat/completions"
-
-
-    val system = MutableLiveData<String>()
-
     //On va aussi créer une variable aléatoire pour choisir une réponse s'il n'y a pas
     // d'internet
     var randInt: Int? = null
 
 
 
-
-
     init {
         // Initialisation des données
+
+        // !!!!! INSERER LA CLE ICI !!!!!
+
+        //Valeur de ma Clée API
+
+        key.value = ""
         //initialement, pas de question posée
         question.value = "Donnée initiale"
         //Valeur de la réponse de base
         answer.value = "Petite réponse Zen"
-
-
-        //Ici on configure le chatBOT
-
-
-        //Valeur de ma Clée API
-        key.value = "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"
         //On va implémenter 21 possibilités de réponses sans internet
         randInt = Random.nextInt(from = 1, until = 22)
     }
@@ -160,7 +150,6 @@ class GlobalViewModel(
 
     //ici :  tout ce qui a attrait à notre bbd sqlite
 
-
     fun setDatabaseHelper(databaseHelper: DatabaseHelper) {
         this.dbHelper = databaseHelper
     }
@@ -231,12 +220,6 @@ class GlobalViewModel(
 
         return answers
     }
-
-
-
-
-
-
 
 }
 

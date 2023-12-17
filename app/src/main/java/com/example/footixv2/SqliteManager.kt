@@ -11,18 +11,34 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.icu.text.SimpleDateFormat
 import android.util.Log
 import okhttp3.RequestBody
+import java.util.Date
+import java.util.Locale
+
+
+import java.util.concurrent.TimeUnit
+
+
+// Gestion automatique de la version de la base de données
+object DatabaseConfig {
+    private val REFERENCE_DATE = "2023-01-01" // Date de référence
+    val DATABASE_NAME = "ball.db"
+
+    val DATABASE_VERSION: Int
+        get() {
+            val referenceDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(REFERENCE_DATE)
+            val currentDate = Date()
+            val diff = currentDate.time - (referenceDate?.time ?: 0)
+            return TimeUnit.MILLISECONDS.toDays(diff).toInt()
+        }
+}
 
 
 //RENDUE OPEN pour pouvoir la mocker et la tester
-open class  DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+open class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DatabaseConfig.DATABASE_NAME, null, DatabaseConfig.DATABASE_VERSION) {
 
-
-    companion object {
-        private const val DATABASE_NAME = "ball.db"
-        private const val DATABASE_VERSION = 4
-    }
 
     //J'avais un problème de table non créee, et les logs suivant n'apparaissaient jamais,
     //EN fait, je dois juste Upgrade ma DB, chose que je ne faisait pas auparavant,
