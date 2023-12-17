@@ -61,8 +61,7 @@ class GlobalViewModel(
         // !!!!! INSERER LA CLE ICI !!!!!
 
         //Valeur de ma Clée API
-
-        key.value = ""
+        key.value = "<RENTRER-LA-CLE-ICI>"
         //initialement, pas de question posée
         question.value = "Donnée initiale"
         //Valeur de la réponse de base
